@@ -15,12 +15,11 @@ public class Main {
     }
 
     public static Main app;
-    private JFrame frame;
-    private CardLayout layout;
+    public static CardLayout layout = new CardLayout();
+    public static JFrame frame = new MainFrame("Informatik-Leistungskurs", layout);
 
     public void init() {
         app = this;
-        this.frame = new MainFrame("Informatik-Leistungskurs", new CardLayout());
         Response.redirectToController(new MainController()::index);
     }
 

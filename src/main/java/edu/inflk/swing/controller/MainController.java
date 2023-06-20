@@ -1,11 +1,21 @@
 package edu.inflk.swing.controller;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class MainController {
+public class MainController extends Controller {
 
     public void index(ActionEvent event) {
-        // TODO: Panel implementieren, dass zum Beispiel auf die Buch-Ansicht verweist.
+
+
+
+        JButton startButton = new JButton("Startknopf");
+        startButton.addActionListener(new BuchController()::index);
+
+        this.panel.add(startButton);
+
+        addLayoutComponent(this.panel, "main");
+        setLayout("main");
     }
 
 }

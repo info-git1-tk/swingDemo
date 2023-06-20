@@ -1,13 +1,15 @@
 package edu.inflk.swing.view;
 
+import edu.inflk.swing.controller.MainController;
 import edu.inflk.swing.model.Resource;
+import edu.inflk.swing.model.Response;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame extends JFrame {
 
-    public MainFrame (String title, LayoutManager layout) {
+    public MainFrame (String title, CardLayout layout) {
         this.setTitle(title);
         this.setLayout(layout);
         init();
@@ -21,7 +23,8 @@ public class MainFrame extends JFrame {
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-    }
 
+        Response.redirectToController(new MainController()::index);
+    }
 
 }
