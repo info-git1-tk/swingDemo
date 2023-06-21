@@ -32,7 +32,6 @@ public class BuchIndexPanel extends DefaultPanel {
         add(new JLabel("erschienen"),constraints);
         add(new JLabel(),constraints);
 
-        // TODO: Über Zählschleife alle in der ArrayList enthaltenen Bücher ausgeben.
         constraints.setRow(2);
         add(isbnTextField,constraints);
         add(titleTextField,constraints);
