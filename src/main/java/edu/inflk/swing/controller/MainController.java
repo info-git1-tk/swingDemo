@@ -2,6 +2,7 @@ package edu.inflk.swing.controller;
 
 import com.formdev.flatlaf.FlatLaf;
 import edu.inflk.swing.model.Route;
+import edu.inflk.swing.view.BagConstraints;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 
@@ -23,17 +24,16 @@ public class MainController extends Controller {
         // Oben Elemente anfügen
         //addNorth(new JLabel());
 
-        // In der Mitte Hauptelement anfügen
         JPanel main = new JPanel();
-        main.setBackground(Color.DARK_GRAY);
+        main.setLayout(new GridBagLayout());
+        BagConstraints gbc = new BagConstraints();
+        gbc.setFill(GridBagConstraints.HORIZONTAL);
 
+        // In der Mitte Hauptelement anfügen
         addCenter(main);
 
         // Unten Elemente anfügen
         addSouth(startButton);
-        addSouth(new JButton("Klick"));
-        addSouth(createHGlue());
-        addSouth(new JButton("Klick"));
 
         // Aktuelles Layout im JFrame rendern.
         render();
