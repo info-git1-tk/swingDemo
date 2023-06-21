@@ -40,7 +40,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(0);
         constraints.setWeightY(0);
         constraints.setFill(GridBagConstraints.HORIZONTAL);
-        constraints.setAnchor(GridBagConstraints.NORTH);
         add(component, constraints);
         return this;
     }
@@ -49,7 +48,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(0);
         constraints.setWeightY(0);
         constraints.setFill(fill);
-        constraints.setAnchor(GridBagConstraints.NORTH);
         add(component, constraints);
         return this;
     }
@@ -59,7 +57,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(0);
         constraints.setWeightY(0);
         constraints.setFill(GridBagConstraints.HORIZONTAL);
-        constraints.setAnchor(GridBagConstraints.NORTH);
         add(component, constraints);
         return this;
     }
@@ -68,7 +65,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(2);
         constraints.setWeightY(0);
         constraints.setFill(GridBagConstraints.HORIZONTAL);
-        constraints.setAnchor(GridBagConstraints.SOUTH);
         add(component, constraints);
         return this;
     }
@@ -77,7 +73,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(2);
         constraints.setWeightY(0);
         constraints.setFill(fill);
-        constraints.setAnchor(GridBagConstraints.SOUTH);
         add(component, constraints);
         return this;
     }
@@ -88,7 +83,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(2);
         constraints.setWeightY(0);
         constraints.setFill(GridBagConstraints.HORIZONTAL);
-        constraints.setAnchor(GridBagConstraints.SOUTH);
         add(component, constraints);
         return this;
     }
@@ -99,7 +93,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(2);
         constraints.setWeightY(0);
         constraints.setFill(fill);
-        constraints.setAnchor(GridBagConstraints.SOUTH);
         add(component, constraints);
         return this;
     }
@@ -109,7 +102,6 @@ public abstract class Controller extends JPanel implements ActionListener {
         constraints.setRow(1);
         constraints.setWeightY(1);
         constraints.setFill(GridBagConstraints.BOTH);
-        constraints.setAnchor(GridBagConstraints.NORTH);
         add(component, constraints);
         return this;
     }

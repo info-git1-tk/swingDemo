@@ -20,10 +20,15 @@ public class MainFrame extends JFrame {
     public MainFrame () {
 
         // Look and Feel Instanz erstellen
-        LafManager.setTheme(new DarculaTheme());
-        LafManager.install();
-        //UIManager.setLookAndFeel( new FlatLightLaf());
-        //FlatGrayIJTheme.setup();
+        //LafManager.setTheme(new DarculaTheme());
+        //LafManager.install();
+        try {
+            UIManager.setLookAndFeel( new FlatLightLaf());
+            FlatGrayIJTheme.setup();
+        } catch (UnsupportedLookAndFeelException e) {
+            throw new RuntimeException(e);
+        }
+
 
         layout = new CardLayout();
         frame = this;

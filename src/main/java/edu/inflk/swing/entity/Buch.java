@@ -22,6 +22,10 @@ public class Buch {
         ausgeliehen = false;
     }
 
+    public String toString() {
+        return anzeigen();
+    }
+
     //Anfrage, welche die Daten eines Buches als Zeichenkette zurückgibt.
     public String anzeigen() {
         String ausgabe = "";
