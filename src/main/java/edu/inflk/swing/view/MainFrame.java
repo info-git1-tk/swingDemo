@@ -24,7 +24,7 @@ public class MainFrame extends JFrame {
         //LafManager.install();
         try {
             UIManager.setLookAndFeel( new FlatLightLaf());
-            FlatGrayIJTheme.setup();
+            FlatNordIJTheme.setup();
         } catch (UnsupportedLookAndFeelException e) {
             throw new RuntimeException(e);
         }

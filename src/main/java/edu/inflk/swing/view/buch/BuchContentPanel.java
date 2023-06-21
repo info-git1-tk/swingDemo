@@ -18,12 +18,10 @@ public class BuchContentPanel extends FullPanel {
 
         JTabbedPane tabs = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
         tabs.addTab("Bestand", buchIndexPanel);
-
+        constraints.setWeightY(2);
+        constraints.setFill(GridBagConstraints.BOTH);
         add(tabs, constraints);
 
-        constraints.setWeightY(2);
-        constraints.setRow(1);
-        add(Box.createVerticalGlue(), constraints);
     }
 
 }
