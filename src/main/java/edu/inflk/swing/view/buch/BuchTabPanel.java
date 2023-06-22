@@ -5,11 +5,11 @@ import edu.inflk.swing.view.FullPanel;
 import javax.swing.*;
 import java.awt.*;
 
-public class BuchContentPanel extends FullPanel {
+public class BuchTabPanel extends FullPanel {
 
     BuchIndexPanel buchIndexPanel;
 
-    public BuchContentPanel() {
+    public BuchTabPanel() {
         setup();
     }
 
