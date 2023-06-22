@@ -47,7 +47,7 @@ public class BuchIndexPanel extends DefaultPanel {
         addButton.setPreferredSize(new Dimension(48, 24));
         isbnTextField.setPreferredSize(new Dimension(120, 24));
         titleTextField.setPreferredSize(new Dimension(120, 24));
-        jahrTextField.setPreferredSize(new Dimension(40, 24));
+        jahrTextField.setPreferredSize(new Dimension(60, 24));
 
         // Label-Zeile
         constraints.setRow(1);
@@ -58,11 +58,13 @@ public class BuchIndexPanel extends DefaultPanel {
 
         // TextField-Zeile
         constraints.setRow(2);
+        constraints.setWeightX(.5);
         add(isbnTextField, constraints);
         add(titleTextField, constraints);
+        constraints.setWeightX(.25);
         add(jahrTextField, constraints);
         add(addButton, constraints);
-        constraints.setWeightX(2);
+        constraints.setWeightX(4);
         add(Box.createHorizontalGlue(), constraints);
 
         // Leerzeile für etwas Abstand

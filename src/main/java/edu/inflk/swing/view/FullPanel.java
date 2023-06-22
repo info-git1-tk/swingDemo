@@ -5,7 +5,7 @@ import java.awt.*;
 
 public abstract class FullPanel extends JPanel {
 
-    protected BagConstraints constraints = new BagConstraints();
+    public BagConstraints constraints = new BagConstraints();
 
     public FullPanel() {
         setLayout(new GridBagLayout());
