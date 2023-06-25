@@ -37,7 +37,8 @@ public class MainFrame extends JFrame {
         setIconImage(new ImageIcon(Resource.getImage("favicon-32x32.png")).getImage());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(1280, 720));
-        setResizable(false);
+        setMinimumSize(new Dimension(640, 480));
+        setResizable(true);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);

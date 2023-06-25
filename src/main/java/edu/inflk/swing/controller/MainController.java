@@ -28,10 +28,16 @@ public class MainController extends Controller {
         JButton eButton = new JButton("E");
         JButton fButton = new JButton("F");
 
+        JButton gButton = new JButton("G");
+        JButton hButton = new JButton("H");
+
         // Referenz auf Methode einer Klasse MIT ActionEvent als Parameter (e):
         aButton.addActionListener(this::onClick);
         bButton.addActionListener(this::onClick);
         cButton.addActionListener(this::onClick);
+
+        gButton.addActionListener(this::onClick);
+        hButton.addActionListener(this::onClick);
 
         // Lambda-Notation als Kurzschreibweise OHNE Übergabe eines ActionEvents:
         dButton.addActionListener(e -> onClickedD());
@@ -45,11 +51,10 @@ public class MainController extends Controller {
             }
         });
 
-
         gbc.fill = GridBagConstraints.BOTH;
+        gbc.weighty = 1;
 
         gbc.gridy = 0;
-
         gbc.weightx = 1;
         main.add(aButton,gbc);
         gbc.weightx = 2;
@@ -57,12 +62,28 @@ public class MainController extends Controller {
         gbc.weightx = .5;
         main.add(cButton,gbc);
 
-        // Gewichtung kann in weiteren Zeilen weggelassen werden, Angabe der Zeile reicht aus:
-        gbc.gridy = 1;
+        /*
+            gbc.gridy = 1;
+            gbc.gridwidth = 3;
+            gbc.weighty = 1;
+            main.add(Box.createGlue(),gbc);
+         */
 
+
+        // Gewichtung kann in weiteren Zeilen weggelassen werden, Angabe der Zeile reicht aus:
+        gbc.gridy = 2;
+        gbc.gridwidth = 1;
+        gbc.weighty = 1;
         main.add(dButton,gbc);
         main.add(eButton,gbc);
         main.add(fButton,gbc);
+
+        // hButton in der dritten Zeile geht über zwei Spalten:
+        gbc.gridy = 3;
+
+        main.add(gButton,gbc);
+        gbc.gridwidth = 2;
+        main.add(hButton,gbc);
 
 
         // In der Mitte Hauptelement anfügen
